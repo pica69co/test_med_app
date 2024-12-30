@@ -39,7 +39,7 @@ const Navbar = () => {
         <ul className="nav__links active">
           {/* <!-- List item for the 'Home' link --> */}
           <li className="link">
-            <a href="../Landing_Page/LandingPage.html">Home</a>
+            <a href="/">Home</a>
           </li>
           {/* <!-- List item for the 'Appointments' link --> */}
           <li className="link">
@@ -47,13 +47,13 @@ const Navbar = () => {
           </li>
           {/* <!-- List item for the 'Sign Up' link with a button --> */}
           <li className="link">
-            <a href="../Sign_Up//Sign_Up.html">
+            <a href="/sign_up">
               <button className="btn1">Sign Up</button>
             </a>
           </li>
           {/* <!-- List item for the 'Login' link with a button --> */}
           <li className="link">
-            <a href="../Login/Login.html">
+            <a href="/login">
               <button className="btn1">Login</button>
             </a>
           </li>
