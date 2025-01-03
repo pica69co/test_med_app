@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => {
   const [showModal, setShowModal] = useState(false);
   const [appointments, setAppointments] = useState([]);
-
+    // console.log("appoinments:", appointments);
   const handleBooking = () => {
     setShowModal(true);
   };
@@ -89,6 +89,8 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
                     <div className="bookedInfo" key={appointment.id}>
                       <p>Name: {appointment.name}</p>
                       <p>Phone Number: {appointment.phoneNumber}</p>
+                      <p>Date: {appointment.date}</p>
+                      <p>Time: {appointment.time}</p>
                       <button onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
                     </div>
                   ))}
