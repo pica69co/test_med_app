@@ -43,7 +43,7 @@ const Navbar = () => {
           </li>
           {/* <!-- List item for the 'Appointments' link --> */}
           <li className="link">
-            <a href="/#">Appointments</a>
+            <a href="/instant-consultation">Appointments</a>
           </li>
           {/* <!-- List item for the 'Sign Up' link with a button --> */}
           <li className="link">
