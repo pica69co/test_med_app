@@ -1,16 +1,15 @@
-// Following code has been commented with appropriate comments for your reference.
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 
-// Function component Notification to display user notifications
+
 const Notification = ({ children }) => {
-  // State variables to manage user authentication, username, doctor data, and appointment data
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [doctorData, setDoctorData] = useState(null);
   const [appointmentData, setAppointmentData] = useState(null);
 
-  // useEffect hook to perform side effects in the component
+
   useEffect(() => {
     // Retrieve stored username, doctor data, and appointment data from sessionStorage and localStorage
     const storedUsername = sessionStorage.getItem('email');
@@ -34,15 +33,15 @@ const Notification = ({ children }) => {
     }
   }, []); // Empty dependency array ensures useEffect runs only once after initial render
 
-  // Return JSX elements to display Navbar, children components, and appointment details if user is logged in
+
   return (
     <div>
-      {/* Render Navbar component */}
+
       <Navbar />
-      {/* Render children components */}
+
       {children}
-      {/* Display appointment details if user is logged in and appointmentData is available */}
-      {isLoggedIn && appointmentData && (
+
+      {!isLoggedIn && !appointmentData && (
         <>
           <div className="appointment-card">
             <div className="appointment-card__content">
