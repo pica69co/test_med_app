@@ -1,0 +1,44 @@
+.reviews-container {
+   margin: 0 auto;
+  padding-top: 120px; /* Push the content below the navbar */
+  max-width: fit-content;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-left: 15px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.reviews-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  
+}
+
+.reviews-table th,
+.reviews-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.reviews-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.feedback-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.feedback-button:hover {
+  background-color: #0056b3;
+}

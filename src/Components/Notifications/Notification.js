@@ -36,12 +36,11 @@ const Notification = ({ children }) => {
 
   return (
     <div>
-
-      <Navbar />
+   
 
       {children}
 
-      {!isLoggedIn && !appointmentData && (
+      {isLoggedIn && appointmentData && (
         <>
           <div className="appointment-card">
             <div className="appointment-card__content">
@@ -64,6 +63,7 @@ const Notification = ({ children }) => {
           </div>
         </>
       )}
+      
     </div>
   );
 };
