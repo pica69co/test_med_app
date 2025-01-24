@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const mongoURI =  "mongodb://root:UzzllAOlpUKnsnsBrWN8L7Ff@172.21.238.235:27017";
+const mongoURI =  "mongodb://root:RaESpEJBjP8fMF3ys3yUszck@172.21.239.213:27017";
 
 const connectToMongo = async (retryCount) => {
     const MAX_RETRIES = 3;
     const count = retryCount ?? 0;
     try {
-        await mongoose.connect(mongoURI, { dbName: 'labs-mongo-cuddly-round-balloon'});
+        await mongoose.connect(mongoURI, { dbName: 'labs-mongo-cold-squeaking-carpenter'});
         console.info('Connected to Mongo Successfully')
 
         return;

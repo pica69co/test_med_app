@@ -11,30 +11,27 @@ import Sign_Up from './Components/Sign_Up/Sign_Up.js';
 import InstantConsultation from './Components/InstantConsultationBooking/InstantConsultation.js'
 import Notification from './Components/Notifications/Notification.js';
 import ReviewForm from './Components/ReviewForm/ReviewForm.js';
+import ProfileForm from './Components/ProfileCard/ProfileCard.js';
+import ReportsLayout from './Components/ReportsLayout/ReportsLayout.js';
 
 function App() {
   
   return (
     <div className="App">
-
-        <BrowserRouter>
-
-          <Navbar/>
-          <Notification />  
-
+        <BrowserRouter>          
+          <Notification />
           <Routes>
-
             <Route path='/' element={<Landing_Page/>}/>
             <Route path='/login' element={<Login />} />
             <Route path='/sign_up' element={<Sign_Up />} />
             <Route path="/instant-consultation" element={<InstantConsultation />} />
             <Route path="/review" element={<ReviewForm/>}/>
-          </Routes>
-          
+            <Route path="/profile" element={<ProfileForm />} />
+            <Route path="/reports" element={<ReportsLayout />} />
+          </Routes>          
         </BrowserRouter>
     </div>
   );
 }
-
 
 export default App;

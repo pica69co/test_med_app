@@ -6,6 +6,9 @@
     margin-top: 10%; /* Top margin of 10% */
 }
 
+.login-text h2{
+   text-align: center;
+}
 /* Styles for form groups */
 .form-group {
     margin-bottom: 20px; /* Bottom margin for spacing between form groups */
