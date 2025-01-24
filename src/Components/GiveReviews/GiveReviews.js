@@ -20,7 +20,7 @@ function GiveReviews({ onSubmit, consultationId }) {
         e.preventDefault();
 
         // Check if all required fields are filled before submission
-        if (name && review && rating > 0) {
+        if (name && review && (rating > 0)) {
             setSubmittedMessage(`Name: ${name}, Review: ${review}, Rating: ${rating}`);
             setShowWarning(false); // Hide warning if all fields are filled
             setIsSubmitted(true); // Set the form as submitted
@@ -39,43 +39,43 @@ function GiveReviews({ onSubmit, consultationId }) {
     };
 
     return (
-        <div className="flex justify-center p-6">
-            <div className="w-96 bg-gray-50 p-6 rounded-lg shadow-lg">
-                <form onSubmit={handleSubmit}>
-                    <div className="text-center mb-4 text-xl font-semibold">Give Your Review</div>
+        <div className="modal-overlay">
+            <div className="modal-container ">
+                <form onSubmit={handleSubmit} className='form'>
+                    <div className="">Give Your Review</div>
                     
                     {/* Display warning message if not all fields are filled */}
-                    {showWarning && <p className="text-red-500 text-center mb-2">Please fill out all fields.</p>}
+                    {showWarning && <p className="warning">Please fill out all fields.</p>}
 
-                    <div className="mb-4">
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name:</label>
+                    <div className="">
+                        <label htmlFor="name" className="">Name:</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                            className=""
                             disabled={isSubmitted}
                         />
                     </div>
 
-                    <div className="mb-4">
-                        <label htmlFor="review" className="block text-sm font-medium text-gray-700">Review:</label>
+                    <div className="">
+                        <label htmlFor="review" className="">Review:</label>
                         <textarea
                             id="review"
                             name="review"
                             value={review}
                             onChange={(e) => setReview(e.target.value)}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                            className=""
                             disabled={isSubmitted}
                         />
                     </div>
 
                     {/* Rating selector */}
-                    <div className="mb-4">
-                        <label htmlFor="rating" className="block text-sm font-medium text-gray-700">Rating:</label>
-                        <div className="flex justify-center space-x-2">
+                    <div className="">
+                        <label htmlFor="rating" className="">Rating:</label>
+                        <div className="">
                             {[1, 2, 3, 4, 5].map((star) => (
                                 <span
                                     key={star}
@@ -91,8 +91,9 @@ function GiveReviews({ onSubmit, consultationId }) {
                     {/* Submit button */}
                     <button 
                         type="submit" 
-                        className="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
+                        className=""
                         disabled={isSubmitted}
+                        
                     >
                         Submit
                     </button>
@@ -100,8 +101,8 @@ function GiveReviews({ onSubmit, consultationId }) {
 
                 {/* Display the submitted message if available */}
                 {submittedMessage && (
-                    <div className="mt-4 text-center">
-                        <h3 className="font-semibold text-lg">Submitted Message:</h3>
+                    <div className="">
+                        <h3 className="">Submitted Message:</h3>
                         <p>{submittedMessage}</p>
                     </div>
                 )}
